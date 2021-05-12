@@ -67,10 +67,12 @@ fi
 
 if [ -f ${BUILD_DIR}/nuget.config ]; then
 	echo Existe na ${BUILD_DIR}/nuget.config
+	cat ${BUILD_DIR}/nuget.config
 fi
 
 if [ -f ${BUILD_DIR}/src/nuget.config ]; then
 	echo Existe na ${BUILD_DIR}/src/nuget.config
+	cat ${BUILD_DIR}/src/nuget.config 
 fi
 
 echo  ${BUILD_DIR} - ${OUTPUT_DIR} - ${CACHE_DIR}
