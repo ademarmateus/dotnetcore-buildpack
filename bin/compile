@@ -65,6 +65,14 @@ if [ -n "$(cat $PROJECT_FILE | grep 'netcoreapp2.0')" ]; then
 	info "More info https://github.com/jincod/dotnetcore-buildpack/issues/44" | indent
 fi
 
+if [ -f ${BUILD_DIR}/nuget.config ]; then
+	echo Existe na ${BUILD_DIR}/nuget.config
+fi
+
+if [ -f ${BUILD_DIR}/src/nuget.config ]; then
+	echo Existe na ${BUILD_DIR}/src/nuget.config
+fi
+
 echo  ${BUILD_DIR} - ${OUTPUT_DIR} - ${CACHE_DIR}
 
 export NUGET_PACKAGES="${CACHE_DIR}/nuget/cache"
